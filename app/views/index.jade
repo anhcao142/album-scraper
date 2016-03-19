@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    form(name='nctPlaylist', action='/get-album', method='post')
+        input(type='text' name='musicUrl')
+        input(type='submit' value='Check')
+    if album
+        p success #{album}
